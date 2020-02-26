@@ -1,0 +1,23 @@
+﻿
+@{
+    ViewData["Title"] = "Second";
+    var jonVariable = "";
+    @*it foregets what type it is when we stick it in TempData, so we (usually) use 'var' &/or .ToString() to help assign a type to it*@
+    if (TempData["Jon"] != null)
+    {
+        @*sending temp data*@
+        @* jonVariable = TempData["Jon"].ToString() ?? null; *@
+
+
+        jonVariable = TempData["Jon"].ToString();
+        TempData.Keep();
+    }
+    else
+    {
+        jonVariable = "ERRR";
+    }
+}
+
+<h1>Second</h1>
+
+Jon Hobby: @jonVariable

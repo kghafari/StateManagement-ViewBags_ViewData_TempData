@@ -1,0 +1,11 @@
+﻿
+@{
+    ViewData["Title"] = "ListCatsWithViewBag";
+}
+
+<h1>List Cats With ViewBag</h1>
+
+@{
+    List<string> cats = ViewBag.Cats.ToList();
+}
+

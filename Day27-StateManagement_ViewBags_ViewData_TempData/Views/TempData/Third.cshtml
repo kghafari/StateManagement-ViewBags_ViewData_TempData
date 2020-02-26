@@ -1,0 +1,20 @@
+﻿
+@{
+    ViewData["Title"] = "Third";
+    var jonVariable = "";
+    if (TempData["Jon"] != null)
+    {
+         @* Here' we're "pulling Jon's Car out of the box
+             And we're going to let his car be 'thrown away'
+             when we leave this page.*@
+         jonVariable = TempData["Jon"].ToString() ?? null; 
+    }
+    else
+    {
+         jonVariable = "ERRR";
+    }
+}
+
+<h1>Third</h1>
+
+@jonVariable
